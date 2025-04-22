@@ -7,3 +7,17 @@ get("/") do
   <p>Define some routes in app.rb</p>
   "
 end
+
+get("/square/new") do
+  erb(:square)
+end
+
+get("/square/results") do
+  @num = params.fetch("number")
+  @num_squared = @num.to_f ** 2
+  erb(:square_results)
+end
+
+get("/squar_root/new") do
+  
+end
